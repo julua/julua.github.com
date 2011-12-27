@@ -1,0 +1,19 @@
+<html>
+
+<head>
+
+<title> Фотографии от Кэди </title>
+
+</head>
+
+<body bgcolor=black link=white > <h1 align="center"> <font sze="3" color="white" face="Segoe Print"> Галерея </font> 
+
+<p> </br>
+
+<a href="C:\Users\Julia\Desktop\работа\вэб дизайн!\01 о фотографе.html"> Свадебное фото </a>
+<p> </br>
+<a href="C:\Users\Julia\Desktop\работа\вэб дизайн!\03 галерея.html"> Студийная съёмка </a>
+<p> </br>
+<a href="C:\Users\Julia\Desktop\работа\вэб дизайн!\04 как оформить заказ.html"> Фотосессия на свежем воздухе </a>
+<p> </br>
+<a href="C:\Users\Julia\Desktop\работа\вэб дизайн!\05 прайс-лист.html"> Предметная съёмка </a>

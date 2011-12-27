@@ -1,0 +1,88 @@
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<h2 class=s2>Калькулятор.</h2>
+<form enctype='multipart/form-data' method="post">
+<div align=center><p class=s1>Введите первое число: <input type="text" name="name"> Введите второе число: <input type="text" name="email"><br>
+<br>
+<fieldset>
+<legend>Выбор действия.</legend>
+<table border=0 width=100%>
+<tr>
+
+<td>умножить:
+<input name="znak" type="radio" value="mult">
+</td>
+
+
+<td class=s3>разделить:
+<input name="znak" type="radio" value="del">
+</td>
+</tr>
+<tr>
+<td class=s3>сложить:
+<input name="znak" type="radio" value="sl">
+</td>
+
+
+<!-- вторая часть -->
+<td class=s3>отнять:
+<input name="znak" type="radio" value="min">
+</td>
+</tr>
+</table>
+</fieldset>
+<br>
+<input type="submit" value="Расчитать"></div>
+
+
+</form>
+</body>
+</html>
+
+<?php
+$x = $_POST ['name'];
+$y = $_POST ['email'];
+$znak = $_POST ['znak'];
+if ($x == '' || $y ==''){
+exit;
+}
+if ($znak == ''){
+echo 'error';
+exit;
+}
+if (!eregi ('[0-9]', $x) || eregi ('[a-zA-Z]', $x)){
+exit;
+}
+if (!eregi ('[0-9]', $y) || eregi ('[a-zA-Z]', $y)){
+exit;
+}
+if ($znak == 'mult'){
+$rez = $x * $y;
+$viv = "*";
+}
+elseif ($znak == 'del'){
+
+if($y == "0"){ # защищаемся от ошибки при делении на ноль
+# если убрать эту проверку будет ошибка "Warning: Division by zero in /var/www/скрипт.php on line 78"
+
+echo "<span style=\"color:f00;\">На ноль делить нельзя.</span>";
+die;
+}
+else{
+$rez = $x / $y;
+$viv = "/";
+}
+}
+elseif ($znak == 'sl'){
+$rez = $x + $y;
+$viv = "+";
+}
+elseif ($znak == 'min'){
+$rez = $x - $y;
+$viv = "-";
+}
+echo $x.$viv.$y."=".$rez;
+?>
